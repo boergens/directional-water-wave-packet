@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Watch a finite water-wave packet travel in one direction from a broad emitter.">
+<title>Directional water wave packet animation</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#101c25;color:#e6f0f5;font:16px/1.6 system-ui,sans-serif}main{max-width:900px;margin:auto;padding:32px 20px}h1{font-size:clamp(24px,4vw,34px);line-height:1.2;font-weight:550}p{max-width:76ch;color:#b6cbd5}video{display:block;width:100%;height:auto;border-radius:8px;background:#101c25}a{color:#7fd8ee}a:focus-visible{outline:2px solid #ffbb73;outline-offset:4px}.links{display:flex;gap:20px;flex-wrap:wrap}.note{font-size:14px;color:#98aebd}
+</style>
+</head>
+<body><main>
+<h1>Directional water wave packet animation</h1>
+<p>A 40 cm wide tapered emitter launches one finite packet towards the right. The source stops after 1.33 seconds while the packet continues across open water.</p>
+<video id="animation" controls playsinline muted loop preload="metadata" poster="preview.png" aria-label="A finite packet of water waves traveling to the right, with a graph of its height and envelope.">
+<source src="wave-packet.mp4" type="video/mp4">
+Your browser cannot play this video. <a href="wave-packet.mp4">Download the animation.</a>
+</video>
+<p class="note">Six-cycle burst, slowed to about 0.38× real speed. The top view and centerline profile show the calculated wave field.</p>
+<p class="links"><a href="interactive.html">Open the interactive simulation</a><a href="wave-packet.mp4" download>Download the video</a><a href="preview.png">View a still image</a></p>
+<p class="note">The model includes gravity, surface tension, diffraction, and approximate viscous damping. The launch chamber is schematic; its internal resonance is not modeled.</p>
+<script>
+const video=document.getElementById('animation');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)video.play().catch(()=>{});
+</script>
+</main></body>
+</html>
